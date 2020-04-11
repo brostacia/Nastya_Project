@@ -9,8 +9,14 @@ public class HelloWorld {
 	    String str = new String("лингвистика");
 	    //Строка ниже эквивалентна, просто это укороченная запись:
 	    String str2 = "лингвистика";
-	    
 		System.out.println("Анастасия, Вы молодец!");
+		
+		//Конкатенация строк
+		String q = "Proba";
+		q += " and proba2";
+		
+		//Длина строки
+		System.out.println(q.length());
 
 	}
 
