@@ -2,7 +2,7 @@
 
 public class HelloWorld {
 	public static void main(String[] args) {
-		String str = "Какой прекрасный день!";
+		String str = "Какой прекрасный день, и светит солнце!";
 		char[] chArray = str.toCharArray();
 		      
         for(int i=0;i<chArray.length;i++){
