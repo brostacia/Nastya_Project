@@ -3,17 +3,10 @@
 public class HelloWorld {
     public static void main(String[] args) {
 	String str = ("Какой прекрасный день, и светит солнце!").toLowerCase();
-	char[] chArray = str.toCharArray();
-	
-	//массив такой длины, сколько букв в русском языке. По умолчанию заполняется нулями.
-	int Zero[];
-	Zero = new int[33];
-		
-    //по строке
-    for(int i=0;i<chArray.length;i++){
-    	int index=0;
-    	Zero[index] += 1;
-    	}    	
-    System.out.println(Zero);
+	int[] letters = new int['я'];
+	for(int i = 0;i < letters.length;i++)
+	    letters[i] = 0;
+	for(int i = 0;i < str.length();i++)
+	    letters[str.charAt(i)]++;
     }  
  }
