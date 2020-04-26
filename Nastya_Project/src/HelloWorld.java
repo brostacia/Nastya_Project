@@ -14,8 +14,10 @@ public class HelloWorld {
 	String[] words = str.split("\\s+");
 	List<Word> occurrences = new LinkedList();
 	for(String subStr:words) {
-        System.out.println(subStr); 
+        occurrences.add(subStr);
+        count++;
+       if (count > 1) 
+    	   System.out.println(occurrences);
 	}
-  }
+   }
 }
- 
