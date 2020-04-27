@@ -14,12 +14,14 @@ public class HelloWorld {
 	String[] words = str.split("\\s+");
 	
 	List<Word> occurrences = new LinkedList();;
-	for(int i = 0; i < words.length; i++) {
-		occurrences.add(i,words[i]);
-		count++;
-	if (count > 1) 
-		System.out.println(occurrences);
+	for(String i: words){
+		Word w = new Word();
+		w.word = i;
+		w.count = 1;
+		occurrences.add(w);
 	}
-   }
+	for(Word w: occurrences)
+	    System.out.println(w.word + ": " + w.count);
+    }
 }
 
