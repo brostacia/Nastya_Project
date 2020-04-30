@@ -1,5 +1,4 @@
 //поиск повторяющихся слов в тексте
-
 import java.util.*;
 
 class Word
@@ -13,13 +12,14 @@ public class HelloWorld {
 	String str = ("Какой сегодня день, чудесный день!").toLowerCase().replaceAll("[^a-zA-Zа-яА-Я]", " ");
 	String[] words = str.split("\\s+");
 	
-	List<Word> occurrences = new LinkedList();
-	for(int i = 0; i < words.length; i++) {
-		occurrences.add(i,words[i]);
-		count++;
-	if (count > 1) 
-		System.out.println(occurrences);
+	List<Word> occurrences = new LinkedList<Word>();
+	for(String subStr:words) {
+		Word w = new Word();
+		w.word = subStr;	
+		if (!occurrences.contains(w))
+			occurrences.add(w);
+			w.count++;			
+			System.out.println(occurrences);
 	}
-   }
 }
-
+}
