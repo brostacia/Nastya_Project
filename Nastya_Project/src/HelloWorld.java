@@ -16,6 +16,9 @@ public class HelloWorld {
 		Word w = new Word();
 		w.word = i;
 		w.count = 1;
+	}
+	{
+	for(Word w: occurrences)
 		if (!occurrences.contains(w))
 			occurrences.add(w);
 		else
