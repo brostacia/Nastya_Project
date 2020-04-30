@@ -1,4 +1,3 @@
-//поиск повторяющихся слов в тексте
 import java.util.*;
 
 class Word
@@ -13,13 +12,16 @@ public class HelloWorld {
 	String[] words = str.split("\\s+");
 	
 	List<Word> occurrences = new LinkedList<Word>();
-	for(String subStr:words) {
+	for(String i: words){
 		Word w = new Word();
-		w.word = subStr;	
+		w.word = i;
+		w.count = 1;
 		if (!occurrences.contains(w))
 			occurrences.add(w);
-			w.count++;			
-			System.out.println(occurrences);
+		else
+			occurrences.add(w.count + 1,w);
+	}		
+	for(Word w: occurrences)
+		System.out.println(w.word + ": " + w.count);
 	}
-}
 }
