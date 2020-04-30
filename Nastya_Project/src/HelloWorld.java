@@ -13,7 +13,7 @@ public class HelloWorld {
 	String str = ("Какой сегодня день, чудесный день!").toLowerCase().replaceAll("[^a-zA-Zа-яА-Я]", " ");
 	String[] words = str.split("\\s+");
 	
-	List<Word> occurrences = new LinkedList();;
+	List<Word> occurrences = new LinkedList();
 	for(int i = 0; i < words.length; i++) {
 		occurrences.add(i,words[i]);
 		count++;
