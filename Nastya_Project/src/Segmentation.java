@@ -1,8 +1,8 @@
-
 import java.util.*;
 import java.io.*;
 
 public final class Segmentation
+
 {
     private final String[] abbrevs = new String[0];
 
