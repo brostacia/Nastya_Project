@@ -16,11 +16,7 @@ public class ReadInputs {
 			String line = null;
 			while ((line = bufferedReader.readLine()) != null) {
 				Token tokens [] = Tokenizer.tokenize(line);
-				int count=0;
-				for (Token t : tokens) {
-					count ++;
-				}
-				System.out.println(count);
+				System.out.println(tokens.length);
 				System.out.println(Arrays.toString(tokens));
 			}
 		} catch (Exception e) {
