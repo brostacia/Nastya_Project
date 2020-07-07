@@ -25,30 +25,11 @@ public class ReadInputs {
 					}			
 				}
 				System.out.println(Arrays.toString(tokens));
-				System.out.println("Количество токенов: " + tokens.length);
-				System.out.println("Парадигматические омографы: " + homographs);	
+				System.out.println("Количество токенов: " + tokens.length);	
 			}
+			System.out.println("Парадигматические омографы: " + homographs);
 		} catch (Exception e) {
 		}
 		
 	}
 }
-
-
-	
-	/*
-	 * 
-        HashSet<Integer> myHashSet = new HashSet<Integer>();
- 
-        myHashSet.add(1);
-        myHashSet.add(2);
-        myHashSet.add(3);
-        // We add 1 one more time
-        myHashSet.add(1);
- 
-        for (int i : myHashSet)
-            System.out.println(i);
-    }
-}
-	 */
-	
