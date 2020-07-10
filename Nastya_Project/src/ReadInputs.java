@@ -7,9 +7,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import sun.net.ftp.FtpDirEntry.Type;
-
-
 public class ReadInputs {
 	
 	public static void main(String[] args) {
@@ -21,18 +18,15 @@ public class ReadInputs {
 			String line = null;
 			while ((line = bufferedReader.readLine()) != null) {
 				Token tokens [] = Tokenizer.tokenize(line);
-	
 				for (int i=0; i<tokens.length; i++) {
 					for(int j=0; j<Homonyms.PARADIGMATIC.length; j++) {
 						if (tokens[i].text.equals(Homonyms.PARADIGMATIC[j])) {
 							//homographs.add(tokens[i].text); // омограф
 							int count = 1;
-							if (tokens[i-count].type == Token.Type.CYRIL){
-								System.out.println(tokens[i-count]);	
-							}else {
-								count++;
-								System.out.println(tokens[i-count]);
-								}
+							while (tokens[i-count].type != Token.Type.CYRIL && i>=0) {
+										count++;							
+									}
+							System.out.println(tokens[i-count]);	
 							}
 						}
 					}
@@ -44,3 +38,4 @@ public class ReadInputs {
 		
 	}
 }
+
